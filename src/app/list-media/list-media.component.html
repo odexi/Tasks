@@ -1,0 +1,13 @@
+
+<li *ngFor="let image of images">
+<img [src]="'http://media.mw.metropolia.fi/wbma/uploads/'+image.filename">
+</li>
+
+<div *ngFor="let stop of stops; let i = index">
+    <h3>Stop {{i}}</h3>
+    <ul>
+        <li *ngFor="let route of stops.patterns">
+            {{route.name}}
+        </li>
+    </ul>
+</div>
